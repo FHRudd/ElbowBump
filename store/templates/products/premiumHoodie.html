@@ -1,0 +1,183 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<!--- Product -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mb-0">
+      <div id="productPageSlider" class="carousel slide" data-ride="carousel">
+        <div class="row product-gallery">
+          <div class="col-12 mb-0">
+		  <!-- Image slideshow -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<figure class="view overlay rounded z-depth-1 main-img">
+					<img src="../Images/Products/PremiumHoodie/PHblueSlider.jpg" class="img-fluid z-depth-1">
+					</figure>
+				</div>
+				<div class="carousel-item">
+					<figure class="view overlay rounded z-depth-1 main-img">
+					<img src="../Images/Products/PremiumHoodie/PHblackSlider.jpg" class="img-fluid z-depth-1">
+					</figure>
+				</div>
+				<div class="carousel-item">
+					<figure class="view overlay rounded z-depth-1 main-img">
+					<img src="../Images/Products/PremiumHoodie/PHsandSlider.jpg" class="img-fluid z-depth-1">
+					</figure>
+				</div>
+				<div class="carousel-item">
+					<figure class="view overlay rounded z-depth-1 main-img">
+					<img src="../Images/Products/PremiumHoodie/PHpinkSlider.jpg" class="img-fluid z-depth-1">
+					</figure>
+				</div>
+			</div>
+			<!-- Left and right controls -->
+			<a class="carousel-control-prev" href="#productPageSlider" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="#productPageSlider" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-3">
+                <div class="view overlay rounded z-depth-1 gallery-item">
+                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg"
+                    class="img-fluid">
+                  <div class="mask rgba-white-slight"></div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="view overlay rounded z-depth-1 gallery-item">
+                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13a.jpg"
+                    class="img-fluid">
+                  <div class="mask rgba-white-slight"></div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="view overlay rounded z-depth-1 gallery-item">
+                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14a.jpg"
+                    class="img-fluid">
+                  <div class="mask rgba-white-slight"></div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="view overlay rounded z-depth-1 gallery-item">
+                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15a.jpg"
+                    class="img-fluid">
+                  <div class="mask rgba-white-slight"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+	<br>
+      <h3>Premium Hoodie</h3>
+      <p><span class="mr-1"><strong>£35.00</strong></span></p>
+      <p class="pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit
+        error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam. Distinctio,
+        officia quis dolore quos sapiente tempore alias.</p>
+	  <br>
+      <div class="table-responsive">
+        <table class="table table-sm table-borderless mb-0">
+          <tbody>
+            <tr>
+              <th class="pl-0 w-25" scope="row"><strong>Size</strong></th>
+              <td>
+				<select class="custom-select mr-sm-1" id="productsSizeDD">
+					<option selected></option>
+					<option value="1">Small</option>
+					<option value="2">Medium</option>
+					<option value="3">Large</option>
+					<option value="4">XLarge</option>
+					<option value="5">2XLarge</option>
+				</select>
+			  </td>
+            </tr>
+            <tr>
+              <th class="pl-0 w-25" scope="row"><strong>Color</strong></th>
+              <td>
+				<select class="custom-select mr-sm-1" id="productsColorDD">
+					<option selected></option>
+					<option value="1">Sand</option>
+					<option value="2">Sky Blue</option>
+					<option value="3">Baby Pink</option>
+					<option value="4">Oxford Blue</option>
+					<option value="5">Black</option>
+					<option value="6">White</option>
+					<option value="7">Forest Green</option>
+			  </td>
+            </tr>
+            <tr>
+              <th class="pl-0 w-25" scope="row"><strong>Print Position</strong></th>
+              <td>
+				  <select class="custom-select mr-sm-1" id="productsPrintPositionDD">
+					<option selected></option>
+					<option value="1">Left</option>
+					<option value="2">Center</option>
+				  </select>
+			  </td>
+            </tr>
+			 <tr>
+              <th class="pl-0 w-25" scope="row"><strong>Quantity</strong></th>
+              <td>
+				  <input class="form-control" type="number" value="1" min="0" max="50" id="productQuantity">
+			  </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+	  <br>
+      <button type="button" class="btn btn-primary btn-md mr-1 mb-2">Buy now</button>
+      <button type="button" class="btn btn-light btn-md mr-1 mb-2"><i class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+	  <div class="classic-tabs border rounded px-4 pt-1">
+       <ul class="nav tabs-primary nav-justified" id="advancedTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link show active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="true">Information</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="returns-tab" data-toggle="tab" href="#returns" role="tab" aria-controls="returns" aria-selected="false">Returns</a>
+          </li>
+        </ul>
+		<hr>
+        <div class="tab-content" id="advancedTabContent">
+          <div class="tab-pane fade active show" id="info" role="tabpanel" aria-labelledby="info-tab">
+            <table class="table table-striped table-bordered mt-3">
+              <thead>
+                <tr>
+                  <th scope="row" class="w-150 dark-grey-text h6">Sizes</th>
+                  <td><em>S</em></td>
+				  <td><em>M</em></td>
+				  <td><em>L</em></td>
+				  <td><em>XL</em></td>
+				  <td><em>XXL</em></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="w-150 dark-grey-text h6">Chest (in)</th>
+                  <td><em>34</em></td>
+				  <td><em>38</em></td>
+				  <td><em>42</em></td>
+				  <td><em>46</em></td>
+				  <td><em>50</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tab-pane fade" id="returns" role="tabpanel" aria-labelledby="returns-tab">
+			<p> If you change your mind about a product you’ve bought from us, please return it to the address at the bottom of the page, within 14 days from delivery. Please do not attempt to return any products after this period as it will be unsuccessful. All returns should include proof of purchase and be returned in the same condition as they were sent. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+

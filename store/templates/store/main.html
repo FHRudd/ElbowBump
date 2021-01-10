@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Elbow Bump Apparel</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<script type ="text/javascript">
+		var user = '{{request.user}}'
+
+		function getToken(name) {
+			let cookieValue = null;
+			if (document.cookie && document.cookie !== '') {
+				const cookies = document.cookie.split(';');
+				for (let i = 0; i < cookies.length; i++) {
+					const cookie = cookies[i].trim();
+					// Does this cookie string begin with the name we want?
+					if (cookie.substring(0, name.length + 1) === (name + '=')) {
+						cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+						break;
+					}
+				}
+			}
+			return cookieValue;
+		}
+		var csrftoken = getToken('csrftoken');
+
+		function getCookie(name) {
+			var cookieArr = document.cookie.split(";");
+
+			for(var i=0; i< cookieArr.length; i++) {
+				var cookiePair = cookieArr[i].split("=");
+
+				if(name == cookiePair[0].trim()){
+					return decodeURIComponent(cookiePair[1]);
+				}
+			}
+			return null;
+		}
+
+		var cart = JSON.parse(getCookie('cart'))
+		if(cart == undefined){
+			cart = {}
+			console.log('Cart was created')
+			document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/"
+		}
+
+		console.log('Cart:', cart)
+	</script>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md navbar-light bg-light stick-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'Images/logo.png' %}"> </a>
+	<a class="navbar-brandText"><span class="brandText"> Elbow Bump Apparel </span></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'home' %}">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'shop' %}">Shop</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'team' %}">Team</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'cart' %}">Cart</a>
+			</li>
+        </ul>
+	</div>
+</div>
+</nav>
+
+{% block content %}
+{% endblock content %}
+
+<!--- Footer -->
+<footer>
+<div class="container-fluid padding">
+<div class="row text-center padding">
+	<div class="col-12">
+		<a href="{% url 'home' %}"><img src="{% static 'Images/logoFooter.png' %}"></a>
+		<hr class="light">
+		<p>5 Spencer Road</p>
+		<p>Chiswick</p>
+		<p>London</p>
+		<p>W4 3SS</p>
+		<a href="https://www.instagram.com/elbowbump_apparel/"><i class="fab fa-instagram fa-3x"></i></a>
+	</div>
+	<hr class="light-100">
+		<div class="col-md-4">
+		<img src="{% static 'Images/sslCert.png' %}">
+		</div>
+		<div class="col-md-4">
+			<br>
+			<h5>&copy;Elbow Bump Apparel 2020</h5>
+		</div>
+		<div class="col-md-4">
+		<a href="https://uk.trustpilot.com/evaluate/www.elbow-bump.org"><img src="{% static 'Images/trustpilotStars.png' %}"></a>
+		</div>
+	</div>
+</div>
+</footer>
+	<script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+</body>
+</html>

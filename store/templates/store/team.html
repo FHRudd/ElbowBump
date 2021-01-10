@@ -1,0 +1,97 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<!--- Heading -->
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+	<div class="col-12">
+		<h1 class="display-4"> Meet the Team </h1>
+	</div>
+</div>
+</div>
+
+<!--- Cards -->
+<div class="container-fluid padding">
+<div class="row padding">
+	<div class="col-md-4">
+		<div class="card">
+			<div class="cardBlueBorder">
+				<img class="card-img-top" src="{% static 'Images/Team/CharlieDay.jpg' %}">
+				<div class="card-body">
+					<h4 class="card-title">Charlie Day</h4>
+					<p class="card-text">Co-Founder &amp Director</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="card">
+			<div class="cardBlueBorder">
+				<img class="card-img-top" src="{% static 'Images/Team/JackRhodes.jpg' %}">
+				<div class="card-body">
+					<h4 class="card-title">Jack Rhodes</h4>
+					<p class="card-text">Co-Founder &amp Director</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="card">
+			<div class="cardBlueBorder">
+				<img class="card-img-top" src="{% static 'Images/Team/JamieClark.jpg' %}">
+				<div class="card-body">
+					<h4 class="card-title">Jamie Clark</h4>
+					<p class="card-text">Co-Founder &amp Director</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="container-fluid padding">
+<div class="row justify-content-around">
+		<div class="col-md-4">
+			<div class="card">
+				<div class="cardOrangeBorder">
+					<img class="card-img-top" src="{% static 'Images/Team/ellieSelkirk.jpg' %}">
+					<div class="card-body">
+						<h4 class="card-title">Ellie Selkirk</h4>
+						<p class="card-text">Photographer</p>
+						<center> <a href="#"><i class="fab fa-instagram fa-5x"></i></a></center>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4" >
+			<div class="card">
+				<div class="cardOrangeBorder">
+					<img class="card-img-top" src="{% static 'Images/Team/imogenFrost.jpg' %}">
+					<div class="card-body">
+						<h4 class="card-title">Imogen Frost</h4>
+						<p class="card-text">Graphic Designer</p>
+						<center> <a href="#"><i class="fab fa-instagram fa-5x"></i></a></center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--- Form -->
+<div class="col-12">
+	<h2> Contact Us </h2>
+	<form>
+	  <div class="form-group">
+		<label for="formEmail"> Your Email address</label>
+		<input type="email" class="form-control" id="formEmail" placeholder="name@example.com">
+	  </div>
+	  <div class="form-group">
+		<label for="formTextArea">What's your reason for getting in touch today?</label>
+		<textarea class="form-control" id="formTextArea" rows="3"></textarea>
+	  </div>
+	  <button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<!--- Intro -->
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+	<div class="col-12">
+		<h1 class="display-4"> Gallery </h1>
+			<p> Sample Text  Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text</p>
+	</div>
+</div>
+</div>
+<!--- Gallery -->
+<div class="container">
+ <div class="row">
+	<div id="imageGallery"></div>
+      {% for image in images %}
+      <div class="col-md-4">
+        <a href="{{image.imageURL}}" data-size="1600x1067">
+          <img src="{{image.imageURL}}" class="img-fluid">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock content %}

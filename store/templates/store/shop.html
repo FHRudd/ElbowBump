@@ -1,0 +1,33 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<!--- Products -->
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+	<div class="col-12">
+		<h1 class="display-4"> Pre-Order </h1>
+			<p> Elbow Bump Apparel is new. As in, you're seeing us take our very first steps into the industry kinda new. We're committed to minimising our carbon footprint and consequently wouldn't want to overproduce and contribute to the huge problems that fast fashion already causes. As such, please allow up to two weeks to receive your first orders. You should get it sooner, but the world is a funny place at the moment!  CJJ x </p>
+	</div>
+</div>
+</div>
+
+<!--- Cards -->
+<div class="container-fluid padding">
+<div class="row padding">
+	{% for product in products %}
+	<div class="col-md-4">
+		<div class="card">
+			<a href="/shop/{{product.name}}">
+			<img class="card-img-top" src="{{product.imageURL}}"></a>
+			<div class="card-body">
+				<h4 class="card-title">{{product.name}}</h4>
+				<p class="card-text">£{{product.price|floatformat:2}}</p>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+</div>
+
+{% endblock content %}

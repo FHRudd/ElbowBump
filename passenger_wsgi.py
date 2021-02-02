@@ -1,0 +1,1 @@
+from ElbowBump.wsgi import application

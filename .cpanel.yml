@@ -2,8 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/elbowbump/public_html
-<<<<<<< HEAD
     - /bin/cp -r /home/elbowbump/repositories/ElbowBump/* $DEPLOYPATH
-=======
-    - /bin/cp -r /home/elbowbump/repositories/ElbowBump/* $DEPLOYPATH
->>>>>>> f9ad806c57db63ad9f687d1d19215f52edff204e
+

@@ -24,7 +24,7 @@ SECRET_KEY = 'djk*skdbk7=@b8sj63=_gzf1ibbcx=kb!-q)r2x#^v-d7^fs*6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.elbowbump.store', 'elbowbump.store', '.herokuapp.com']
 
 # Application definition
 

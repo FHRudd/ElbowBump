@@ -27,6 +27,7 @@
                         </div>
 
                         <div class="mb-3">
+                            <label for="email">Email</label>
                             <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
                             <div class="invalid-feedback">
                                 Please enter a valid email address for shipping updates.
@@ -104,9 +105,10 @@
                                         </div>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div>
+                                                <button type="button" class="btn btn-light">
                                                 <a data-product="{{item.product.id}}" data-ItemSize="{{item.size}}" data-ItemColour="{{item.colour}}" data-ItemPrint="{{item.printposition}}" data-action="remove" type="button"
                                                    class="card-link-secondary small text-uppercase mr-3 remove-cart"><i
-                                                        class="fas fa-trash-alt mr-1"></i> Remove item </a>
+                                                        class="fas fa-trash-alt mr-1"></i> Remove item </a></button>
                                             </div>
                                             <p class="mb-0">
                                                 <span><strong>£{{item.get_total|floatformat:2}}</strong></span></p>
@@ -120,8 +122,6 @@
                                     <h5 class="mb-4">We accept</h5>
                                     <img class="mr-2" width="45px" src="{% static 'images/Payments/visa.svg'%}"
                                          alt="Visa">
-                                    <img class="mr-2" width="45px" src="{% static 'images/Payments/amex.svg'%}"
-                                         alt="American Express">
                                     <img class="mr-2" width="45px" src="{% static 'images/Payments/mastercard.svg'%}"
                                          alt="Mastercard">
                                     <img class="mr-2" width="45px" src="{% static 'images/Payments/paypal.png'%}"

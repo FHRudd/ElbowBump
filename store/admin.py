@@ -18,5 +18,6 @@ admin.site.register(OrderItem)
 admin.site.register(ShippingAddress)
 admin.site.register(Variation)
 admin.site.register(GalleryImages)
+admin.site.register(ContactUs)
 
 

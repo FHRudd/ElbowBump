@@ -93,5 +93,13 @@
 	  <button type="submit" class="btn btn-primary">Submit</button>
 	</form>
 </div>
-
+<script type="text/javascript">
+    var form = document.getElementById('form-group')
+	form.addEventListener('submit', function(e){
+	    	e.preventDefault()
+	    	console.log('Contact Us form submitted...')
+	    	ContactUs.email = form.formEmail.value
+        	ContactUs.message = form.formTextArea.value
+    })
+</script>
 {% endblock content %}

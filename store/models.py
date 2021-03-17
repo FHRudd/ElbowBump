@@ -225,3 +225,11 @@ class GalleryImages(models.Model):
         except:
             url = ''
         return url
+
+
+class ContactUs(models.Model):
+    email = models.CharField(max_length=200)
+    message = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return self.email

@@ -78,7 +78,7 @@ def cart(request):
         if order['get_cart_total'] > 35:
             order['get_shipping'] = 0
         else:
-            order['get_shipping'] = order['get_cart_items'] * 0.5
+            order['get_shipping'] = order['get_cart_items'] * 3.0
 
         order['get_order_total'] = order['get_cart_total'] + order['get_shipping']
 

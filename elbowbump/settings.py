@@ -73,8 +73,13 @@ WSGI_APPLICATION = 'elbowbump.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ddb80ehgh3lp6',
+        'HOST': 'ec2-34-254-69-72.eu-west-1.compute.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'pgxiqvzlwmglla',
+        'PASSWORD': '88b22b234caafe6fa719c1ca6094f011ef35068af4bf8521d03dcbf1210efad9'
+
     }
 }
 
@@ -115,7 +120,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    #os.path.join(BASE_DIR, 'static')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

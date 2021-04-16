@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'djk*skdbk7=@b8sj63=_gzf1ibbcx=kb!-q)r2x#^v-d7^fs*6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['www.elbowbump.store', 'elbowbump.store', '.herokuapp.com']
 
@@ -120,7 +120,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    #os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

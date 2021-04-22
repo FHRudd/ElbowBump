@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ELcybFrhGNV5a0gp7_54WNh5F3yF79jpoOQnqnJYwVjQ_tUn330kCDtMNEh6iF_UiyqPSNdcx1RE6PIo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['www.elbowbump.store', 'elbowbump.store', '.herokuapp.com']
 
